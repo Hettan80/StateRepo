@@ -33,7 +33,7 @@ namespace StateLib
 
         public virtual void SelectedValue()
         {
-            Console.WriteLine("Today day is" + day);
+            Console.WriteLine("Today day is " + day);
             clockSetup.State = clockSetup.FinishedState;
         }
 

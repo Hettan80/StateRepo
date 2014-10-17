@@ -32,7 +32,7 @@ namespace StateLib
 
         public virtual void SelectedValue()
         {
-            Console.WriteLine("Month is" + month);
+            Console.WriteLine("Month is " + month);
             clockSetup.State = clockSetup.DaySetupState;
             
         }

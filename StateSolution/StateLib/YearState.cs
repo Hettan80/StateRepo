@@ -21,10 +21,10 @@ namespace StateLib
         {
             year++;
         }
-        public virtual void SelectedValue()
+        public virtual void SelectClockValue()
         {
         Console.WriteLine("Year is" + year);
-        
+         //clockSetup
         }
 
         public virtual void PreviousValue()
@@ -32,6 +32,10 @@ namespace StateLib
             year--;
         }
 
+       public int SelectValue
+        {
+            get { return year; }
+        }
     }
 
 }

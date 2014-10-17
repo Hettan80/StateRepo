@@ -38,9 +38,12 @@ namespace StateLib
             currentState.PreviousValue();
         }
 
-        public virtual void GetSelectedDate()
+        public virtual DateTime GetSelectedDate
         {
-           
+           get
+            {
+                return new DateTime(YearState.SelectValue,MonthState.SelectValue,DayState.SelectValue);
+            }
         }
         public virtual IClock YearSetupState
         {

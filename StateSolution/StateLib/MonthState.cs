@@ -11,6 +11,7 @@ namespace StateLib
         private ClockSetup clockSetup;
         private int month;
         private int _m;
+
         public MonthState(ClockSetup clockSetup, int m)
         {
             this.clockSetup = clockSetup;
@@ -18,6 +19,7 @@ namespace StateLib
             this._m = m;
 
         }
+
         public virtual void NextValue()
         {
             if (month < 12)
@@ -45,9 +47,6 @@ namespace StateLib
         {
             get { return month; }
         }
-
-
-       
-        }
     }
+}
 

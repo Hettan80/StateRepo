@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StateLib
 {
-    class FinishedState:IClock
+    class FinishedState : IClock
     {
         private ClockSetup clockSetup;
 
@@ -25,7 +25,7 @@ namespace StateLib
             Console.WriteLine("Ignored...");
         }
 
-        public void SelectClockValue()
+        public void SelectedValue()
         {
             DateTime selectedDate = clockSetup.GetSelectedDate;
             Console.WriteLine("Date set to: "+selectedDate);
@@ -35,5 +35,6 @@ namespace StateLib
         {
             get { throw new System.NotSupportedException("Clock setup finished"); }
         }
+
     }
 }

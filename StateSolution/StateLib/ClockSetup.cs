@@ -23,7 +23,6 @@ namespace StateLib
             dayState = new DayState(this);
             finishedState = new FinishedState(this);
 
-            State = yearState;
         }
 
         public virtual IClock State
@@ -35,7 +34,6 @@ namespace StateLib
             set
             {
                 yearState = value;
-                State = yearState;
             }
         }
         public IClock MonthState
@@ -49,7 +47,14 @@ namespace StateLib
 
         public virtual void PushKnob()
         {
-            currentState.SelectedValue();
+            if (currentState != null)
+            {
+                currentState.SelectedValue();
+            }
+            else
+            {
+                State = yearState;
+            }
         }
 
         public virtual void RotateRight()

@@ -23,7 +23,7 @@ namespace StateLib
 
         public virtual void PushKnob()
         {
-            currentState.SelectValue();
+            currentState.SelectClockValue();
         }
 
         public virtual void RotateRight()

@@ -25,7 +25,7 @@ namespace StateLib
 
         public virtual void SelectClockValue()
         {
-            Console.WriteLine("Mont is" + month);
+            Console.WriteLine("Month is" + month);
             //clockSetup
         }
 
@@ -47,4 +47,4 @@ namespace StateLib
        
         }
     }
-}
+

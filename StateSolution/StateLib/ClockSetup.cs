@@ -32,7 +32,11 @@ namespace StateLib
         }
         public IClock YearState
         {
-            set { yearState = value; }
+            set
+            {
+                yearState = value;
+                State = yearState;
+            }
         }
         public IClock MonthState
         {

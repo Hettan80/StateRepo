@@ -10,10 +10,13 @@ namespace StateLib
     {
         private ClockSetup clockSetup;
         private int month;
-        public MonthState(ClockSetup clockSetup)
+        private int _m;
+        public MonthState(ClockSetup clockSetup, int m)
         {
             this.clockSetup = clockSetup;
             month = DateTime.Now.Month;
+            this._m = m;
+
         }
         public virtual void NextValue()
         {

@@ -10,12 +10,18 @@ namespace StateLib
     {
         private ClockSetup clockSetup;
         private int year;
+        private ClockSetup setup;
+        private int _y;
 
-        public YearState(ClockSetup clockSetup)
+        public YearState(ClockSetup clockSetup, int y)
         {
             this.clockSetup = clockSetup;
             year = DateTime.Now.Year;
+            this._y = y;
         }
+
+       
+        
 
         public virtual void NextValue()
         {

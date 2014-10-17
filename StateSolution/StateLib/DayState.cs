@@ -9,12 +9,17 @@ namespace StateLib
     {
         private ClockSetup clockSetup;
         private int day;
+        private ClockSetup setup;
+        private int _p;
 
-        public DayState(ClockSetup clockSetup)
+        public DayState(ClockSetup clockSetup,int p)
         {
             this.clockSetup = clockSetup;
             day = DateTime.Now.Day;
+           this._p = p;
         }
+
+       
         public virtual void NextValue()
         {
             if (day < DateTime.DaysInMonth(new DateTime().Year,

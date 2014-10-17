@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="ClockSetup.cs" />
     <Compile Include="DayState.cs" />
+    <Compile Include="FinishedState.cs" />
     <Compile Include="IClock.cs" />
     <Compile Include="MonthState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

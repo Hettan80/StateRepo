@@ -9,7 +9,6 @@ namespace StateLib
     {
         private ClockSetup clockSetup;
         private int day;
-        private ClockSetup setup;
 
         public DayState(ClockSetup clockSetup,int p)
         {
@@ -35,7 +34,7 @@ namespace StateLib
         public virtual void SelectedValue()
         {
             Console.WriteLine("Today day is" + day);
-            //clockSetup
+            clockSetup.State = clockSetup.DaySetupState;
         }
 
         public virtual void PreviousValue()

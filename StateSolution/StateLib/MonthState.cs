@@ -33,7 +33,8 @@ namespace StateLib
         public virtual void SelectedValue()
         {
             Console.WriteLine("Month is" + month);
-            //clockSetup
+            clockSetup.State = clockSetup.MonthSetupState;
+            
         }
 
         public virtual void PreviousValue()

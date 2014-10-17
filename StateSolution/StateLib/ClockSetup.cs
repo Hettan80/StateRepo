@@ -9,30 +9,38 @@ namespace StateLib
 {
     public class ClockSetup
     {
-        private IClock _YearState;
-        private IClock _MonthState;
-        private IClock _DayState;
+        private IClock yearState;
+        private IClock monthState;
+        private IClock dayState;
+        private IClock finishedState;
 
         private IClock currentState;
 
         public ClockSetup()
         {
-           _YearState = new YearState(this);
-           _MonthState = new MonthState(this);
-           _DayState = new DayState(this);
+            yearState = new YearState(this);
+            monthState = new MonthState(this);
+            dayState = new DayState(this);
+            finishedState = new FinishedState(this);
+
+            State = yearState;
         }
 
+        public virtual IClock State
+        {
+            set { currentState = value; }
+        }
         public IClock YearState
         {
-            set { _YearState = value; }
+            set { yearState = value; }
         }
         public IClock MonthState
         {
-            set { _MonthState = value; }
+            set { monthState = value; }
         }
         public IClock DayState
         {
-            set { _DayState = value; }
+            set { dayState = value; }
         }
 
         public virtual void PushKnob()
@@ -54,31 +62,35 @@ namespace StateLib
         {
            get
             {
-                return new DateTime(_YearState.SelectValue,_MonthState.SelectValue,_DayState.SelectValue);
+                return new DateTime(yearState.SelectValue,monthState.SelectValue,dayState.SelectValue);
             }
         }
         public virtual IClock YearSetupState
         {
             get
             {
-                return _YearState;
+                return yearState;
             }
         }
-        //public virtual IClock MonthSetupState
-        //{
-        //    get
-        //    {
-        //        return MonthState;
-        //    }
-        //}
-        //public virtual IClock DaySetupState
-        //{
-        //    get
-        //    {
-        //        return DayState;
-        //    }
-        //}
+        public virtual IClock MonthSetupState
+        {
+            get
+            {
+                return monthState;
+            }
+        }
+        public virtual IClock DaySetupState
+        {
+            get
+            {
+                return dayState;
+            }
+        }
 
+        public virtual IClock FinishedState
+        {
+            get { return finishedState; }
+        }
  
     }
 }

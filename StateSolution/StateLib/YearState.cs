@@ -10,7 +10,6 @@ namespace StateLib
     {
         private ClockSetup clockSetup;
         private int year;
-        private ClockSetup setup;
 
         public YearState(ClockSetup clockSetup, int y)
         {
@@ -32,7 +31,7 @@ namespace StateLib
         public virtual void SelectedValue()
         {
         Console.WriteLine("Year is" + year);
-         //clockSetup
+            clockSetup.State = clockSetup.YearSetupState;
         }
 
         public virtual void PreviousValue()

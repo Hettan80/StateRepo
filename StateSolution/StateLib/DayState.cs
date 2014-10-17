@@ -10,13 +10,16 @@ namespace StateLib
         private ClockSetup clockSetup;
         private int day;
         private ClockSetup setup;
-        private int _p;
 
         public DayState(ClockSetup clockSetup,int p)
         {
             this.clockSetup = clockSetup;
+            day =  p;
+        }
+        public DayState(ClockSetup clockSetup)
+        {
+            this.clockSetup = clockSetup;
             day = DateTime.Now.Day;
-           this._p = p;
         }
 
        

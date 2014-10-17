@@ -16,18 +16,16 @@ namespace StateLib
 
         public ClockSetup()
         {
-            YearState = new YearState(this);
-           //MonthState = new MontState(this);
-           //DayState = new DayState(this);
-
-            
+           YearState = new YearState(this);
+           MonthState = new MonthState(this);
+           DayState = new DayState(this);
         }
 
 
 
         public virtual void PushKnob()
         {
-            currentState.SelectClockValue();
+            currentState.SelectedValue();
         }
 
         public virtual void RotateRight()

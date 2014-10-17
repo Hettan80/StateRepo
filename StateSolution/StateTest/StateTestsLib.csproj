@@ -53,6 +53,12 @@
     <Compile Include="ClockSetupTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StateLib\StateLib.csproj">
+      <Project>{9bdb3151-1695-497b-b41c-96066cbb7229}</Project>
+      <Name>StateLib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

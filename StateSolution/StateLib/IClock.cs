@@ -11,7 +11,7 @@ namespace StateLib
     {
        void PreviousValue();
         void NextValue();
-        void SelectClockValue();
+        void SelectedValue();
         int SelectValue { get;}
     }
 }

@@ -1,0 +1,78 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace StateLib
+{
+    public class ClockSetup
+    {
+        public IClock YearState;
+        public IClock MonthState;
+        public IClock DayState;
+        public IClock currentState;
+
+        public ClockSetup()
+        {
+            YearState = new YearState(this);
+            //MonthState = new MontState(this);
+            //DayState = new DayState(this);
+        }
+
+
+
+        public virtual void PushKnob()
+        {
+            currentState.SelectedValue();
+        }
+
+        public virtual void RotateRight()
+        {
+            currentState.NextValue();
+        }
+
+        public virtual void RotateLeft()
+        {
+            currentState.PreviousValue();
+        }
+
+<<<<<<< HEAD
+        public DateTime GetSelectedDate()
+        {
+         
+=======
+        public virtual DateTime GetSelectedDate
+        {
+           get
+            {
+                return new DateTime(YearState.SelectValue,MonthState.SelectValue,DayState.SelectValue);
+            }
+>>>>>>> 471b360902de3af8d41dfb43bfa9da0c52acef5f
+        }
+        public virtual IClock YearSetupState
+        {
+            get
+            {
+                return YearState;
+            }
+        }
+        //public virtual IClock MonthSetupState
+        //{
+        //    get
+        //    {
+        //        return MonthState;
+        //    }
+        //}
+        //public virtual IClock DaySetupState
+        //{
+        //    get
+        //    {
+        //        return DayState;
+        //    }
+        //}
+
+
+    }
+}

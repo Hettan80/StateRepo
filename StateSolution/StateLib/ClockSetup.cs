@@ -8,18 +8,60 @@ namespace StateLib
 {
     public class ClockSetup
     {
-        public YearState YearState { get; set; }
-        public MonthState MonthState { get; set; }
-        public DayState DayState { get; set; }
+        private IClock YearState;
+        private IClock MonthState;
+        private IClock DayState;
 
-        public void PushKnob()
-        { }
-        public void RotateRight()
-        { }
-        public void RotateLeft()
-        { }
-        public void GetSelectedDate()
-        { }
+        private IClock currentState;
+
+        public ClockSetup()
+        {
+            YearState = new YearState(this);
+           //MonthState = new MontState(this);
+           //DayState = new DayState(this);
+        }
+
+        public virtual void PushKnob()
+        {
+            currentState.SelectValue();
+        }
+
+        public virtual void RotateRight()
+        {
+            currentState.NextValue();
+        }
+
+        public virtual void RotateLeft()
+        {
+            currentState.PreviousValue();
+        }
+
+        public virtual void GetSelectedDate()
+        {
+           
+        }
+        public virtual IClock YearSetupState
+        {
+            get
+            {
+                return YearState;
+            }
+        }
+        //public virtual IClock MonthSetupState
+        //{
+        //    get
+        //    {
+        //        return MonthState;
+        //    }
+        //}
+        //public virtual IClock DaySetupState
+        //{
+        //    get
+        //    {
+        //        return DayState;
+        //    }
+        //}
+
  
     }
 }

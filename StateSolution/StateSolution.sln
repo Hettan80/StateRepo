@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StateTest", "StateTest\StateTest.csproj", "{25F0E503-C239-48DD-8F4E-B53A10765F78}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StateTestsLib", "StateTest\StateTestsLib.csproj", "{25F0E503-C239-48DD-8F4E-B53A10765F78}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StateLib", "StateLib\StateLib.csproj", "{9BDB3151-1695-497B-B41C-96066CBB7229}"
 EndProject

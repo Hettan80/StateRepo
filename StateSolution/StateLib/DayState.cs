@@ -34,7 +34,7 @@ namespace StateLib
         public virtual void SelectedValue()
         {
             Console.WriteLine("Today day is" + day);
-            clockSetup.State = clockSetup.DaySetupState;
+            clockSetup.State = clockSetup.FinishedState;
         }
 
         public virtual void PreviousValue()

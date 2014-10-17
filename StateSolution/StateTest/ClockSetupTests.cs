@@ -18,7 +18,7 @@ namespace StateTestsLib
          setup.MonthState = new MonthState(setup, 3);
          setup.DayState = new DayState(setup, 15);
          // Act
-         setup.PushKnob();
+        // setup.PushKnob();
          setup.RotateRight();
          setup.PushKnob();
          setup.RotateRight();

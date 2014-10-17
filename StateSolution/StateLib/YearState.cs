@@ -31,7 +31,7 @@ namespace StateLib
         public virtual void SelectedValue()
         {
         Console.WriteLine("Year is" + year);
-            clockSetup.State = clockSetup.YearSetupState;
+            clockSetup.State = clockSetup.MonthSetupState;
         }
 
         public virtual void PreviousValue()

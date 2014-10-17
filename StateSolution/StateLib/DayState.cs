@@ -24,7 +24,7 @@ namespace StateLib
             }
         }
 
-        public virtual void SelectClockValue()
+        public virtual void SelectedValue()
         {
             Console.WriteLine("Today day is" + day);
             //clockSetup

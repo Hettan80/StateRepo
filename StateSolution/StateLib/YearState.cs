@@ -21,7 +21,7 @@ namespace StateLib
         {
             year++;
         }
-        public virtual void SelectClockValue()
+        public virtual void SelectedValue()
         {
         Console.WriteLine("Year is" + year);
          //clockSetup

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Channels;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,20 +9,31 @@ namespace StateLib
 {
     public class ClockSetup
     {
-        private IClock YearState;
-        private IClock MonthState;
-        private IClock DayState;
+        private IClock _YearState;
+        private IClock _MonthState;
+        private IClock _DayState;
 
         private IClock currentState;
 
         public ClockSetup()
         {
-           YearState = new YearState(this);
-           MonthState = new MonthState(this);
-           DayState = new DayState(this);
+           _YearState = new YearState(this);
+           _MonthState = new MonthState(this);
+           _DayState = new DayState(this);
         }
 
-
+        public IClock YearState
+        {
+            set { _YearState = value; }
+        }
+        public IClock MonthState
+        {
+            set { _MonthState = value; }
+        }
+        public IClock DayState
+        {
+            set { _DayState = value; }
+        }
 
         public virtual void PushKnob()
         {
@@ -42,14 +54,14 @@ namespace StateLib
         {
            get
             {
-                return new DateTime(YearState.SelectValue,MonthState.SelectValue,DayState.SelectValue);
+                return new DateTime(_YearState.SelectValue,_MonthState.SelectValue,_DayState.SelectValue);
             }
         }
         public virtual IClock YearSetupState
         {
             get
             {
-                return YearState;
+                return _YearState;
             }
         }
         //public virtual IClock MonthSetupState

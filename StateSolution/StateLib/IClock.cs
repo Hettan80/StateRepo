@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace StateLib
 {
-    interface IClock
+    public interface IClock
     {
-         YearState YearState { get; set; }
-         MonthState MonthState { get; set; }
-         DayState DayState { get; set; }
+        void PreviousValue();
+        void NextValue();
+        void SelectValue();
+        int SelectedValue { get;}
     }
 }
